@@ -1,3 +1,87 @@
+/*-----------------------
+       Side menu 
+-------------------------*/
+.three-line{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50px;
+    height: 50px;
+    font-size:x-large;
+    padding: 10px;
+    margin: 5px auto;
+    border: 0;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.three-line:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+.sidebar{
+    background: #fff;
+    width: 15%;
+    height: 100vh;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    transition:all 0.3s ease;
+}
+
+.shortcut-links a img{
+    width: 20px;
+    margin-right: 20px;
+}
+.shortcut-links a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+
+}
+.shortcut-links a:first-child{
+    color: #ed3833;
+}
+.sidebar hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+}
+.subcribed-list h3{
+    font-size: 13px;
+    margin: 20px 0;
+    color: #5a5a5a;
+
+}
+.subcribed-list a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+.subcribed-list a img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.small-sidebar{
+    width: 5%;
+}
+.small-sidebar a p{
+    display: none;
+}
+.small-sidebar h3{
+    display: none;
+}
+
+
+/*--------------------
+       Navber 
+---------------------*/
 .serach-group{
     width: 90%;
 }
@@ -29,13 +113,12 @@
     font-size: larger;
     margin-left: -7%;
     background-color: rgb(245, 245, 245);
+    border: 0;
 }
 .mic-icon:hover{
     background-color: rgb(219, 219, 219);
 }
 .nav-icon{
-    text-decoration: none;
-    color: rgb(26, 26, 26);
     display: flex;
     align-items: center;
     justify-content:center;
@@ -43,12 +126,12 @@
     width: 45px;
     height: 45px;
     font-size: larger;
-    /* background-color: rgb(245, 245, 245); */
+    background-color:white;
+    border: 0;
 }
 
 .nav-icon:hover{
     background-color: rgb(219, 219, 219);
-    color: rgb(26, 26, 26);
 }
 
 /*--------------------------------
