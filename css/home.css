@@ -1,15 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/****************offcanvas*****************/
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+    --bs-offcanvas-width: 250px !important;
+}
 /*-----------------------
        Side menu 
 -------------------------*/
-.three-line{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    width: 55px;
-    height: 55px;
+.three-line {
+    width: 50px;
+    height: 50px;
     font-size:xx-large;
-    padding: 10px;
-    margin: 5px auto;
     border: 0;
     background-color: white;
     border-radius: 50%;
@@ -19,38 +28,34 @@
     background-color: rgb(219, 219, 219);
 }
 
-.sidebar{
+/* .sidebar{
+    width: 150%;
     background: #fff;
-    padding-top: 40px;
-    transition:all 0.3s ease;
-}
+} */
 
-.shortcut-links a img{
-    width: 30px;
+.shortcut-links a img {
+    width: 20px;
     margin-right: 10px;
 }
 
-.shortcut-links a{
+.shortcut-links a {
     display: flex;
     align-items: center;
-    margin: 5px;
+    /* margin: 5px; */
     padding: 10px;
     text-decoration: none;
     color: black;
     border-radius: 7px;
     width: 100%;
+    font-size: small;
+    font-weight: 500;
 }
 
-.shortcut-links a:hover{
+.shortcut-links a:hover {
     background-color: whitesmoke;
     color: black;
 }
-.sidebar hr{
-    border: 0;
-    height: 2px;
-    background: rgb(136, 136, 136);
-    width: 85%;
-}
+
 /* 
 .subcribed-list h3{
     font-size: 13px;
@@ -69,36 +74,44 @@
     margin-right: 20px;
 } */
 
-.small-sidebar{
-    width: 50%;
-    margin: 0 auto;
+.small-sidebar {
+    width: 60%;
+    margin-left: 7px;
 
 }
-.small-sidebar a{
-    padding: 25px 5px;
-    justify-content: center;
+.small-sidebar a {
+    padding: 15px 5px;
+    display: block;
+    font-size: xx-small;
 }
-.small-sidebar a:hover{
+.small-sidebar a img {
+    width: 25px;
+}
+.small-sidebar a:hover {
     background-color: rgb(233, 233, 233);
 }
-.small-sidebar a span{
-    display: none;
-}
-.small-sidebar .hide-icon{
-    display: none;
-}
-.small-sidebar h3{
-    display: none;
-}
 
-
+.small-sidebar .hide-icon {
+    display: none;
+}
+/********************Header css******************/
+header {
+    width: 100%;
+    height: 3.1rem;
+    background: #fff;
+}
 /*--------------------
        Navber 
 ---------------------*/
-.serach-group{
+.logo-group {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.serach-group {
     width: 90%;
 }
-.search-input{
+.search-input {
     color: gray;
     padding: 5px 20px;
     border: 1px solid;
@@ -106,16 +119,15 @@
     height: 40px;
     border-radius: 50px 0 0 50px;
 }
-.search-btn{
+.search-btn {
     color: gray;
     border: 1px solid;
     width: 10%;
     height: 40px;
-    padding: 5px;
-    padding-right: 10px;
+    padding: 5px 10px 5px 5px;
     border-radius: 0 50px 50px 0;
 }
-.mic-icon{
+.mic-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,68 +140,148 @@
     background-color: rgb(245, 245, 245);
     border: 0;
 }
-.mic-icon:hover{
+.mic-icon:hover {
     background-color: rgb(219, 219, 219);
 }
-.nav-icon{
+.nav-icon {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     font-size: larger;
-    background-color:white;
+    background-color: white;
     border: 0;
 }
 
-.nav-icon:hover{
+.nav-icon:hover {
     background-color: rgb(219, 219, 219);
 }
+.video-section {
+    position: relative;
+    top: 3rem;
+}
+/* mobile phone */
+@media only screen and (max-width: 688px) {
+    .three-line {
+        display: none;
+    }
+    .logo-group a,
+    .logo-group span,
+    .nav-icon {
+        font-size: small;
+        width: 20px;
+        height: 20px;
+    }
+    .nav-icon {
+        margin-right: 8px;
+    }
+    .search-input {
+        padding: 5px 10px;
+        width: 100px;
+        height: 20px;
+        font-size: x-small;
+        margin-left: 20px;
+    }
+    .search-btn {
+        width: 25px;
+        height: 20px;
+        padding: 0;
+        font-size: x-small;
+    }
+    .mic-icon {
+        display: none;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .shortcut-links a img {
+        width: 16px;
+        margin: 5px auto;
+    }
 
+    .shortcut-links a {
+        display: block;
+        padding: 0;
+        color: black;
+        border-radius: 7px;
+        width: 100%;
+    }
+    .shortcut-links a span {
+        display: none;
+    }
+    .sidebar hr {
+        display: none;
+    }
+
+}
+
+/* ipad and another pad */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .search-btn {
+        width: 100px;
+    }
+
+}
+/***************************Stiky slidebar**********************/
+.memubar {
+    position: sticky;
+    top: 3rem;
+    bottom: 0;
+    height: 90.4vh;
+    width: 5rem;
+
+}
+.sidebar {
+    padding-top: 1.5rem;
+}
 /*--------------------------------
           Videos Section 
 ---------------------------------*/
-.thamble-img{
+.videoSection {
+    padding-top: 1rem;
+}
+.thamble-img {
     width: 100%;
     height: 150px;
     border-radius: 15px;
 }
-.video-user{
+.video-user {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     font-size: larger;
-    background-color:rgb(155, 155, 155);
+    background-color: rgb(155, 155, 155);
     border: 0;
 }
-.video-user:hover{
+.video-user:hover {
     color: black;
 }
-.video-cart a{
+.video-cart a {
     text-decoration: none;
     color: black;
 }
-.video-cart a p{
+.video-cart a p {
     font-size: large;
     margin-bottom: 5px;
     color: black;
     font-weight: 500;
 }
-.video-cart p span{
+.video-cart p span {
     font-size: small;
     color: gray;
     font-weight: 500;
 }
-.three-dots{
+.three-dots {
     display: none;
 }
-.video-cart:hover .three-dots{
+.video-cart:hover .three-dots {
     display: block;
     text-decoration: none;
-    color:gray;
+    color: gray;
     margin: 0 auto;
 }
