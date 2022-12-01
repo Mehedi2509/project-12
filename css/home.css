@@ -12,101 +12,64 @@
 .offcanvas-xxl {
     --bs-offcanvas-width: 250px !important;
 }
-/*-----------------------
-       Side menu 
--------------------------*/
-.three-line {
-    width: 50px;
-    height: 50px;
-    font-size:xx-large;
-    border: 0;
-    background-color: white;
-    border-radius: 50%;
-}
-
-.three-line:hover {
-    background-color: rgb(219, 219, 219);
-}
-
-/* .sidebar{
-    width: 150%;
-    background: #fff;
-} */
-
-.shortcut-links a img {
+.offcanvas-links a img {
     width: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
-
-.shortcut-links a {
+.offcanvas-links a{
     display: flex;
     align-items: center;
-    /* margin: 5px; */
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     color: black;
     border-radius: 7px;
     width: 100%;
-    font-size: small;
-    font-weight: 500;
+    font-size: large;
+    margin-bottom: 10px;
 }
 
-.shortcut-links a:hover {
+.offcanvas-links a:hover {
     background-color: whitesmoke;
     color: black;
 }
-
-/* 
-.subcribed-list h3{
-    font-size: 13px;
-    margin: 20px 0;
-    color: #5a5a5a;
-
+.offcanvas-header a{
+    font-size: xx-large;
 }
-.subcribed-list a{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.subcribed-list a img{
-    width: 25px;
-    border-radius: 50%;
-    margin-right: 20px;
-} */
-
-.small-sidebar {
-    width: 60%;
-    margin-left: 7px;
-
-}
-.small-sidebar a {
-    padding: 15px 5px;
-    display: block;
-    font-size: xx-small;
-}
-.small-sidebar a img {
-    width: 25px;
-}
-.small-sidebar a:hover {
-    background-color: rgb(233, 233, 233);
+.offcanvas-title{
+    font-size: x-large;
+    font-weight: 700;
 }
 
-.small-sidebar .hide-icon {
-    display: none;
-}
 /********************Header css******************/
 header {
     width: 100%;
-    height: 3.1rem;
-    background: #fff;
+    height: 4rem;
+    background-image: linear-gradient(to right,rgb(144, 230, 182), rgb(175, 209, 223) );
 }
 /*--------------------
        Navber 
 ---------------------*/
+.three-line {
+    width: 50px;
+    height: 50px;
+    font-size:x-large;
+    border: 0;
+    background-color: rgb(144, 230, 182);
+}
+
+.three-line:hover {
+    background-color: rgb(219, 219, 219);
+    border-radius: 50%;
+}
 .logo-group {
     display: flex;
     align-items: center;
     justify-content: start;
+}
+.logo-group a{
+    font-size:x-large;
+    background-color: white;
+    margin-left: 20px;
 }
 .serach-group {
     width: 90%;
@@ -161,6 +124,71 @@ header {
 .video-section {
     position: relative;
     top: 3rem;
+}
+/*-----------------------
+       Side menu 
+-------------------------*/
+.shortcut-links a img {
+    width: 20px;
+}
+
+.shortcut-links a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    border-radius: 7px;
+    width: 50px;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.shortcut-links a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+.subcribed-list h3{
+    font-size: 13px;
+    margin: 20px 0;
+    color: #5a5a5a;
+
+}
+.subcribed-list a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
+}
+.subcribed-list a img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.small-sidebar {
+    width: 60%;
+    margin-left: 7px;
+
+}
+.small-sidebar a {
+    padding: 15px 5px;
+    display: block;
+    font-size: xx-small;
+}
+.small-sidebar a img {
+    width: 25px;
+}
+.small-sidebar a:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.small-sidebar .hide-icon {
+    display: none;
 }
 /* mobile phone */
 @media only screen and (max-width: 688px) {
@@ -240,7 +268,7 @@ header {
           Videos Section 
 ---------------------------------*/
 .videoSection {
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 .thamble-img {
     width: 100%;
@@ -285,3 +313,184 @@ header {
     color: gray;
     margin: 0 auto;
 }
+
+/*-----------------------
+     Channel page style 
+-------------------------*/
+.channel-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #5a5a5a;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.channel-container h5{
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, rgb(51, 182, 187),rgb(79, 230, 129));
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.channel-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+.channel-menu li{
+    list-style: none;
+    padding: 15px 30px;
+}
+.channel-menu li a{
+    color: gray;
+    text-decoration: none;
+    font-size: small;
+    font-weight: 500;
+}
+.channel-menu li:hover{
+    border-bottom: 2px solid gray;
+}
+
+/*-----------------------
+     Channel page style 
+-------------------------*/
+/*------------------------
+      Play page style 
+--------------------------*/
+.play-container{
+    margin-top: 100px;
+}
+.ratio iframe{
+    border-radius: 20px;
+}
+.play-content{
+    padding-left: 2% ;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.play-video{
+    flex-basis: 69%;
+}
+.play-user{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.play-user a{
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+.play-user a span{
+    color: gray;
+    font-weight: 500;
+}
+.play-user h6{
+    padding: 8px 16px;
+    background-image: linear-gradient(to right, rgb(51, 182, 187),rgb(79, 230, 129));
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-left: 30px;
+}
+.play-user a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.reaction-btn{
+    display: flex;
+    align-items: center;
+}
+.reaction-btn button{
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+.reaction-btn button img{
+    width: 20px;
+    height: 20px;
+}
+.discription{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.discription article{
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: justify;
+    color: #5a5a5a;
+}
+.right-sidebar{
+    flex-basis: 30%;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+.play-video video{
+    width: 100%;
+
+}
+.play-video .tags a{
+    color: #0000ff;
+    font-size: 13px;
+}
+.play-video h3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.iframeVideo{
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+.side_video_list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    }
+.side_video_list img{
+    width: 100%  ;
+}
+
+.side_video_list .small-thumbnail{
+    flex-basis: 49%;
+
+}
+
+.side_video_list .small-thumbnail img{
+    border-radius: 10px;
+    width: 170px;
+    height: 110px;
+    
+}
+
+.side_video_list .vid-info{
+    flex-basis: 49%;
+}
+.vid-info a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.vid-info a:hover{
+    color: black;
+}
+.vid-info p{
+    margin: 5px 0;
+    font-size: small;
+    color: gray;
+}
+
+/*------------------------
+      Play page style 
+--------------------------*/
