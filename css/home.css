@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/****************offcanvas*****************/
+/*-----------------------------
+          Offcanvas 
+-------------------------------*/
 .offcanvas,
 .offcanvas-lg,
 .offcanvas-md,
@@ -40,15 +42,18 @@
     font-weight: 700;
 }
 
-/********************Header css******************/
+/*-----------------------------
+          Offcanvas 
+-------------------------------*/
+/*----------------------------
+            Header 
+------------------------------*/
 header {
     width: 100%;
     height: 4rem;
     background-image: linear-gradient(to right,rgb(144, 230, 182), rgb(175, 209, 223) );
 }
-/*--------------------
-       Navber 
----------------------*/
+
 .three-line {
     width: 50px;
     height: 50px;
@@ -57,19 +62,22 @@ header {
     background-color: rgb(144, 230, 182);
 }
 
-.three-line:hover {
-    background-color: rgb(219, 219, 219);
-    border-radius: 50%;
-}
 .logo-group {
     display: flex;
     align-items: center;
     justify-content: start;
 }
 .logo-group a{
-    font-size:x-large;
-    background-color: rgb(144, 230, 182);
     margin-left: 20px;
+}
+.logo-group a i{
+    font-size:xx-large;
+    color: rgb(150, 0, 250);
+    margin: auto 0;
+}
+.logo-group span{
+    font-size: 22px;
+    color: rgb(150, 0, 250);
 }
 .serach-group {
     width: 90%;
@@ -106,6 +114,10 @@ header {
 .mic-icon:hover {
     background-color: rgb(219, 219, 219);
 }
+.nav-icon-group{
+    display: flex;
+    justify-content: space-around;
+}
 .nav-icon {
     display: flex;
     align-items: center;
@@ -114,7 +126,6 @@ header {
     width: 45px;
     height: 45px;
     font-size: larger;
-    background-color: white;
     border: 0;
 }
 
@@ -170,89 +181,10 @@ header {
     margin-right: 10px;
 }
 
-.small-sidebar {
-    width: 60%;
-    margin-left: 7px;
+/*----------------------------
+            Header 
+------------------------------*/
 
-}
-.small-sidebar a {
-    padding: 15px 5px;
-    display: block;
-    font-size: xx-small;
-}
-.small-sidebar a img {
-    width: 25px;
-}
-.small-sidebar a:hover {
-    background-color: rgb(233, 233, 233);
-}
-
-.small-sidebar .hide-icon {
-    display: none;
-}
-/* mobile phone */
-@media only screen and (max-width: 688px) {
-    .three-line {
-        display: none;
-    }
-    .logo-group a,
-    .logo-group span,
-    .nav-icon {
-        font-size: small;
-        width: 20px;
-        height: 20px;
-    }
-    .nav-icon {
-        margin-right: 8px;
-    }
-    .search-input {
-        padding: 5px 10px;
-        width: 100px;
-        height: 20px;
-        font-size: x-small;
-        margin-left: 20px;
-    }
-    .search-btn {
-        width: 25px;
-        height: 20px;
-        padding: 0;
-        font-size: x-small;
-    }
-    .mic-icon {
-        display: none;
-    }
-    .sidebar {
-        width: 100%;
-    }
-    .shortcut-links a img {
-        width: 16px;
-        margin: 5px auto;
-    }
-
-    .shortcut-links a {
-        display: block;
-        padding: 0;
-        color: black;
-        border-radius: 7px;
-        width: 100%;
-    }
-    .shortcut-links a span {
-        display: none;
-    }
-    .sidebar hr {
-        display: none;
-    }
-
-}
-
-/* ipad and another pad */
-@media only screen and (min-width:688px) and (max-width:992px) {
-    .search-btn {
-        width: 100px;
-    }
-
-}
-/***************************Stiky slidebar**********************/
 .memubar {
     position: sticky;
     top: 3rem;
@@ -417,12 +349,12 @@ header {
     width: 20px;
     height: 20px;
 }
-.discription{
+.discription-box{
     background-color: whitesmoke;
     border-radius: 10px;
     margin: 15px 0;
 }
-.discription article{
+.discription-box article{
     padding: 20px;
     font-size: 14px;
     font-weight: 500;
@@ -514,3 +446,331 @@ header {
 /*------------------------
       Play page style 
 --------------------------*/
+/*------------------------------------------------------------------------------------------------------------ 
+                                           Responsive Design
+--------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------
+                     Mobile phone 
+----------------------------------------------------------------*/
+@media only screen and (max-width: 688px) {
+    header{
+        height: 3rem;
+    }
+    .three-line {
+        font-size: large;
+        width: 30px;
+        height: 30px;
+    }
+    .logo-group a{
+        margin-left: 15px;
+    }
+    .logo-group span{
+        font-size: 12px;
+    }
+    .logo-group a i{
+        font-size:large;
+    }
+    .nav-icon-group{
+        justify-content: end;
+    }
+    .nav-icon {
+        width: 23px;
+        height: 23px;
+        padding: 5px;
+        margin-left: 8px;
+        border-radius: 50%;
+    }
+    .nav-icon i{
+        font-size: smaller;
+    }
+    .search-input {
+        padding: 5px 10px;
+        width: 100px;
+        height: 22px;
+        font-size: x-small;
+        margin-left: 20px;
+    }
+    .search-btn {
+        width: 25px;
+        height: 22px;
+        padding: 0;
+        font-size: x-small;
+    }
+    .mic-icon {
+        display: none;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .shortcut-links a img {
+        width: 16px;
+        margin: 5px auto;
+    }
+
+    .shortcut-links a {
+        display: block;
+        padding: 0;
+        color: black;
+        border-radius: 7px;
+        width: 100%;
+    }
+    .shortcut-links a span {
+        display: none;
+    }
+
+    /*---------------------------------
+           Play page responsive 
+    -----------------------------------*/
+    .play-container{
+        margin-top: 70px;
+    }
+    .play-container h4{
+        font-size: 16px;
+    }
+    .play-user a{
+        margin-right: 10px;
+        line-height: 13px;
+    }
+    .play-user a span{
+        color: gray;
+        font-weight: 500;
+        font-size: 9px;
+    }
+    .play-user h6{
+        font-size: 8px;
+        padding: 6px 10px;
+        margin: auto 10px;
+    }
+    .play-user a img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .reaction-btn{
+        display: flex;
+        align-items: center;
+    }
+    .reaction-btn button{
+        border: 0;
+        padding: 0 10px;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+    .reaction-btn button img{
+        width: 10px;
+        height: 10px;
+    }
+
+    /*--------------------------
+        Channel page responsive 
+    ----------------------------*/
+    .channel-sidebar{
+        display: none;
+    }
+    .channel-logo{
+        width: 55px;
+        height: 55px;
+        margin-right: 10px;
+    }
+    .channel-name{
+        line-height: 13px;
+    }
+    .channel-name span{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .channel-container h5{
+        font-size: small;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    .channel-menu{
+        width: 100%;
+    }
+    .channel-cover img{
+        width: 100%;
+        height: 160px;
+    }
+    .channel-menu li{
+        padding: 5px 15px;
+    }
+    .channel-menu li a{
+        font-size: x-small;
+    }
+
+}
+/*---------------------------------------------------------------
+                     Mobile phone 
+----------------------------------------------------------------*/
+
+/*---------------------------------------------------------------
+                     ipad and another pad 
+----------------------------------------------------------------*/
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    header{
+        height: 3rem;
+    }
+    .three-line {
+        font-size: large;
+        width: 30px;
+        height: 30px;
+    }
+    .logo-group a{
+        margin-left: 15px;
+    }
+    .logo-group span{
+        font-size: 16px;
+    }
+    .logo-group a i{
+        font-size: x-large;
+    }
+    .nav-icon-group{
+        justify-content: end;
+    }
+    .nav-icon {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        margin-left: 25px;
+    }
+    .nav-icon i{
+        font-size: smaller;
+    }
+    .search-input {
+        padding: 8px;
+        width: 300px;
+        height: 25px;
+        font-size: x-small;
+        margin-left: 0;
+    }
+    .search-btn {
+        width: 35px;
+        height: 25px;
+        padding: 0;
+        font-size: x-small;
+    }
+    .mic-icon {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        margin-right: 25px;
+        font-size: small;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .shortcut-links a img {
+        width: 20px;
+        margin: 5px auto;
+    }
+
+    .shortcut-links a {
+        display: block;
+        padding: 0;
+        color: black;
+        border-radius: 7px;
+        width: 100%;
+    }
+
+
+    /*---------------------------------
+           Play page responsive 
+    -----------------------------------*/
+    .play-container{
+        margin-top: 70px;
+    }
+    .play-container h4{
+        font-size: 20px;
+    }
+    .play-user a{
+        margin-right: 10px;
+        line-height: 18px;
+    }
+    .play-user a span{
+        color: gray;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .play-user h6{
+        font-size: 10px;
+        padding: 7px 12px;
+        margin: auto 20px;
+    }
+    .play-user a img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    .reaction-btn button{
+        border: 0;
+        padding: 0 10px;
+        border-radius: 5px;
+        margin: 0 5px;
+    }
+    .reaction-btn button img{
+        width: 13px;
+        height: 13px;
+    }
+    .side_video_list .small-thumbnail img{
+        border-radius: 10px;
+        width: 120px;
+        height: 80px;
+    }
+    .side_video_list .vid-info{
+        flex-basis: 100%;
+    }
+    .vid-info{
+        line-height: 14px;
+        margin-left: 5px;
+        text-align: justify;
+    }
+    .vid-info a{
+        font-size: 12px;
+        
+    }
+    .vid-info p{
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+
+    /*--------------------------
+        Channel page responsive 
+    ----------------------------*/
+    .channel-sidebar{
+        display: block;
+    }
+    .channel-logo{
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    .channel-name{
+        line-height: 16px;
+    }
+    .channel-name span{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .channel-container h5{
+        font-size: large;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+    .channel-cover img{
+        width: 100%;
+        height: 200px;
+        margin-left: 15px;
+    }
+    .channel-menu li{
+        padding: 10px 30px;
+    }
+    .channel-menu li a{
+        font-size: small;
+    }
+
+}
+/*---------------------------------------------------------------
+                     ipad and another pad 
+----------------------------------------------------------------*/
